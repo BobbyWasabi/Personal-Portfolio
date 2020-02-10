@@ -1,4 +1,8 @@
-
+welcome-section{
+    height: auto;
+    flex: auto;
+    color: whitesmoke;
+}
 #h1{
     background-color: aqua;
     border: brown, 12px, dashed;
