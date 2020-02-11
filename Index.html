@@ -5,14 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Robert's Personal Portfolio</title>
+    <link href="/media/examples/link-element-example.css" rel="stylesheet">
+
+<p>This text will be red as defined in the external stylesheet.</p>
+<p style="color: blue">The <code>style</code> attribute can override it, though.</p>
 </head>
 <body>
-    <nav id="navibar"> </nav> 
+    <nav id="navibar"> 
+        <nav id="navbar" class="nav">
+            <ul class="nav-list">
+            <li>
+            <a href="#welcome-section">About</a>
+            </li>
+            <li>
+            <a href="#projects">Work</a>
+            </li>
+            <li>
+            <a href="#contact">Contact</a>
+            </li>
+            </ul>
+            </nav>
+        </flexboxed>
+    </nav> 
 </body>
-    <welcome-section>
-
-<h1>Welcome to my webpage!</h1>
-    </welcome-section>
+<section id="welcome-section" class="welcome-section">
+    <h1>Hey I am Mimic</h1>
+    <p>a web developer</p>
+    </section>
 <projects>
     <project-tile>
         
