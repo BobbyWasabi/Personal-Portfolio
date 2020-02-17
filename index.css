@@ -4,16 +4,26 @@ welcome-section{
     color: whitesmoke;
 }
 h1{
-    background-color: aqua;
-    border: brown, 12px, dashed;
+    background-color: orange;
+    border-radius: 4px;
+    border: brown, 20px, dashed;
     font: bold, green;
 }
 h2{
     height: auto;
 }
 .navbar{
-    background-color: turquoise;
+    background-color: orange;
     justify-content: center;
+}
+.nav-list{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: center;
+    width: 100%;
+    background: repeating-radial-gradient(auto);
+    padding:15px;
 }
 projects{
     flex: auto;
