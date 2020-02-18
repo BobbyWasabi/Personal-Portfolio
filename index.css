@@ -1,8 +1,10 @@
 header{
     background: orange;
     display: flex;
+    position: fixed;
     margin-right: flex;
-    
+    display: 100%;
+    width: 100%;
 }
 head{
     background: orange;
@@ -21,14 +23,16 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 2rem;
     font-weight: 400;
+    text-decoration: none;
 }
 .welcome-section{
     height: auto;
     flex: auto;
     color: orange;
+    width: 100%;
 }
 p{
-    display: flex;
+    display: 100%;
     padding-left: 20px;
 }
 h1
@@ -45,8 +49,8 @@ h2{
     text-decoration: none;
 }
 #navbar{
-    display: flex;
-    position: absolute;
+    display: fixed;
+    position: fixed;
     justify-content: flex-end;
     background-color: orange;
     width: 100%;
@@ -58,29 +62,32 @@ h2{
     justify-content: flex-end;
     top: 0;
     width: 100%;
-    padding:10px;
+
 }
 .nav-list a{
     display: block;
     padding-top: 2rem;
-    padding-right: 2rem;
+    padding-right: 10rem;
     padding-bottom: 2rem;
     padding-left: 2rem;
     text-decoration: initial;
     color: blue;
+    justify-content: flex-end;
 }
-.navlistb {
-    display: hidden;
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
-projects{
+#projects{
     flex: auto;
     padding: 0px;
-    a
 }
-.project-tile{
-    height: auto;
-}
+
 
 
 #welcome-section{
@@ -95,9 +102,12 @@ projects{
 }
 #project-list{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
     background-color: greenyellow;
 }
+
+
 figcaption {
     text-align: center;
 }
