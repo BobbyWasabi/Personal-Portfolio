@@ -16,10 +16,7 @@ head{
     padding: 0px;
     width: 100%;
 }
-{
-    margin: 0;
-    padding: 0;
-}
+
 html{
     scroll-behavior: smooth;
 }
