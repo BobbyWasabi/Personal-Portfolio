@@ -18,9 +18,13 @@ import { starships } from '../Starwars/data/starships.js'
 
 
 const greetingDiv = document.querySelector('.greeting')
-
+const maleButton = document.querySelector("#Malebutton")
+const femalebutton = document.querySelector("#femaleButton")
+const otherButton = document.querySelector("#otherButton")
 const castList = document.createElement("ul")
 
+const maleCharacters = people.filter(person => person.gender === "male")
+console.log(maleCharacters)
 
 let counter = 1
 
@@ -29,17 +33,27 @@ greetingDiv.appendChild(castList)
 
 people.forEach(person => {
     const listItem = document.createElement("li")
-    listItem.textContent = person.name
-    castList.appendChild(listItem)
+ //   listItem.textContent = person.name
+ //   castList.appendChild(listItem)
 
 
-    let anchorWrap= document.createElement("a")
+
+
+    let anchorWrap = document.createElement("a")
     anchorWrap.href = "#"
+
     let imageItem = document.createElement("img")
     imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${counter}.jpg`
     greetingDiv.appendChild(imageItem)
+    
+    imageItem.addEventListener('error', (event) => {
+
     //add some way to click/ handle user clicks on the image
-    imageItem.addEventListener("click", () =>{
+
+   // imageItem.hidden=true
+    //imageItem.src = "...imges/uvu-logo.jpeg"}
+    })
+    imageItem.addEventListener("click", (event) =>{
         console.log("It Worked")
         MouseEvent 
     })
@@ -48,5 +62,5 @@ people.forEach(person => {
     counter++
 
 })
-
+maleButton
 greetingDiv.appendChild(castList)
