@@ -23,44 +23,82 @@ const femalebutton = document.querySelector("#femaleButton")
 const otherButton = document.querySelector("#otherButton")
 const castList = document.createElement("ul")
 
-const maleCharacters = people.filter(person => person.gender === "male")
-console.log(maleCharacters)
+const maleCharacters = people.filter{person => person.gender === "male"}
 
-let counter = 1
+const femaleCharacters = people.filter{person => person.gender === "female"}
+
+const otherCharacters = people.filter(person => {
+    if {person.gender === "hermaphrodite" ||  person.gender === "n/a"}
+    return person
+    }
+})
 
 
-greetingDiv.appendChild(castList)
+console.log(otherCharacters.length)
 
-people.forEach(person => {
-    const listItem = document.createElement("li")
+maleButton.addEventListener("click", (event) => {
+    populateDOM(maleCharacters)
+})
+
+femaleButton.addEventListener("click", (event) => {
+    populateDOM(femaleCharacters)
+})
+otherButton.addEventListener("click", (event) => {
+    populateDOM(otherCharacters)
+})
+//url: "https://swapi.co/api/people/10/"
+
+function getCharacter(url) {
+    let end = url.lastIndexOf('/')
+    let start = end - 2
+    console.log()
+    console.log(`$(Start is: ${url.charAt(start)} and end is: ${url.charAt(end)}`)
+    consol.log(url.slice(start, end))
+    if(url.charAt(start) === '/') {
+        start++
+    }
+    return url.slice(start,end)
+}
+
+getCharNum("https://swapi.co/api/people/1/")
+
+function populateDOM(Characters) {
+    people.forEach(person => {
+
+}
+//greetingDiv.appendChild(castList)
+
+//people.forEach(person => {
+   // const listItem = document.createElement("li")
  //   listItem.textContent = person.name
  //   castList.appendChild(listItem)
 
-
+//function.populateDOM
 
 
     let anchorWrap = document.createElement("a")
     anchorWrap.href = "#"
 
     let imageItem = document.createElement("img")
-    imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${counter}.jpg`
-    greetingDiv.appendChild(imageItem)
+    imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
+    //greetingDiv.appendChild(imageItem)
     
     imageItem.addEventListener('error', (event) => {
 
     //add some way to click/ handle user clicks on the image
 
-   // imageItem.hidden=true
+    imageItem.hidden = true
     //imageItem.src = "...imges/uvu-logo.jpeg"}
     })
-    imageItem.addEventListener("click", (event) =>{
-        console.log("It Worked")
-        MouseEvent 
+    imageItem.addEventListener("click", (event) => {
+        console.log(event)
+        //MouseEvent 
     })
     anchorWrap.appendChild(imageItem)
     greetingDiv.appendChild(anchorWrap)
     counter++
 
 })
+}
 maleButton
 greetingDiv.appendChild(castList)
