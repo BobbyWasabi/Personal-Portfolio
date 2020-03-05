@@ -17,33 +17,39 @@ import { starships } from '../Starwars/data/starships.js'
 
 
 
-const greetingDiv = document.querySelector('.greeting')
+const greetingDiv = document.querySelector('.gallery')
 const maleButton = document.querySelector("#Malebutton")
 const femalebutton = document.querySelector("#femaleButton")
 const otherButton = document.querySelector("#otherButton")
+
 const castList = document.createElement("ul")
 
-const maleCharacters = people.filter{person => person.gender === "male"}
+//const maleCharacters = people.filter(person => person.gender === "male")
 
-const femaleCharacters = people.filter{person => person.gender === "female"}
+//const femaleCharacters = people.filter(person => person.gender === "female")
 
 const otherCharacters = people.filter(person => {
-    if {person.gender === "hermaphrodite" ||  person.gender === "n/a"}
-    return person
+    if (
+        person.gender === "hermaphrodite" ||
+        person.gender === "n/a" ||
+        person.gender === 'none'
     }
+) {
+  return person
+}
 })
 
 
 console.log(otherCharacters.length)
 
-maleButton.addEventListener("click", (event) => {
-    populateDOM(maleCharacters)
+maleButton.addEventListener("click", event => {
+    populateDOM(people.filter(person => person.gender === "male")
 })
 
-femaleButton.addEventListener("click", (event) => {
-    populateDOM(femaleCharacters)
+femaleButton.addEventListener("click", event => {
+    populateDOM(people.filter(person => person.gender === "female")
 })
-otherButton.addEventListener("click", (event) => {
+otherButton.addEventListener("click", event => {
     populateDOM(otherCharacters)
 })
 //url: "https://swapi.co/api/people/10/"
@@ -63,7 +69,12 @@ function getCharacter(url) {
 getCharNum("https://swapi.co/api/people/1/")
 
 function populateDOM(Characters) {
-    people.forEach(person => {
+    removeChildren(gallery)
+    Characters.forEach(person => {
+        //need to extract the number form the person
+        let charNum = getCharNumeber(person.url)
+        let anchorWrap = document.createElement('a')
+        anchorWrap.href = '#'
 
 }
 //greetingDiv.appendChild(castList)
@@ -100,5 +111,5 @@ function populateDOM(Characters) {
 
 })
 }
-maleButton
+maleButton.
 greetingDiv.appendChild(castList)
