@@ -30,8 +30,8 @@ const castList = document.createElement("ul")
 
 const otherCharacters = people.filter(person => {
     if (
-        person.gender === "hermaphrodite" ||
-        person.gender === "n/a" ||
+        person.gender === 'hermaphrodite' ||
+        person.gender === 'n/a' ||
         person.gender === 'none'
     }
 ) {
@@ -42,37 +42,37 @@ const otherCharacters = people.filter(person => {
 
 console.log(otherCharacters.length)
 
-maleButton.addEventListener("click", event => {
-    populateDOM(people.filter(person => person.gender === "male")
+maleButton.addEventListener('click', event => {
+
+    populateDOM(people.filter(person => person.gender === 'male')
 })
 
-femaleButton.addEventListener("click", event => {
-    populateDOM(people.filter(person => person.gender === "female")
+femaleButton.addEventListener('click', event => {
+
+    populateDOM(people.filter(person => person.gender === 'female')
 })
-otherButton.addEventListener("click", event => {
+otherButton.addEventListener('click', event => {
     populateDOM(otherCharacters)
 })
 //url: "https://swapi.co/api/people/10/"
 
-function getCharacter(url) {
+function getCharNumber(url) {
     let end = url.lastIndexOf('/')
     let start = end - 2
-    console.log()
-    console.log(`$(Start is: ${url.charAt(start)} and end is: ${url.charAt(end)}`)
-    consol.log(url.slice(start, end))
+    
     if(url.charAt(start) === '/') {
         start++
     }
-    return url.slice(start,end)
+    return url.slice(start, end)
 }
 
-getCharNum("https://swapi.co/api/people/1/")
+//getCharNumber("https://swapi.co/api/people/1/")
 
-function populateDOM(Characters) {
+function populateDOM(characters) {
     removeChildren(gallery)
-    Characters.forEach(person => {
+    characters.forEach(person => {
         //need to extract the number form the person
-        let charNum = getCharNumeber(person.url)
+        let charNum = getCharNumber(person.url)
         let anchorWrap = document.createElement('a')
         anchorWrap.href = '#'
 
@@ -101,7 +101,7 @@ function populateDOM(Characters) {
     imageItem.hidden = true
     //imageItem.src = "...imges/uvu-logo.jpeg"}
     })
-    imageItem.addEventListener("click", (event) => {
+    imageItem.addEventListener('click', (event) => {
         console.log(event)
         //MouseEvent 
     })
