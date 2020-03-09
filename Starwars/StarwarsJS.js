@@ -33,23 +33,23 @@ const otherCharacters = people.filter(person => {
         person.gender === 'hermaphrodite' ||
         person.gender === 'n/a' ||
         person.gender === 'none'
-    }
+    
 ) {
   return person
 }
 })
 
 
-console.log(otherCharacters.length)
+//console.log(otherCharacters.length)
 
 maleButton.addEventListener('click', event => {
 
-    populateDOM(people.filter(person => person.gender === 'male')
+    populateDOM(people.filter(person => person.gender === 'male'))
 })
 
 femaleButton.addEventListener('click', event => {
 
-    populateDOM(people.filter(person => person.gender === 'female')
+    populateDOM(people.filter(person => person.gender === 'female'))
 })
 otherButton.addEventListener('click', event => {
     populateDOM(otherCharacters)
@@ -69,14 +69,14 @@ function getCharNumber(url) {
 //getCharNumber("https://swapi.co/api/people/1/")
 
 function populateDOM(characters) {
-    removeChildren(gallery)
+    //removeChildren(gallery)
     characters.forEach(person => {
         //need to extract the number form the person
         let charNum = getCharNumber(person.url)
         let anchorWrap = document.createElement('a')
         anchorWrap.href = '#'
 
-}
+
 //greetingDiv.appendChild(castList)
 
 //people.forEach(person => {
@@ -94,7 +94,7 @@ function populateDOM(characters) {
     imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
     //greetingDiv.appendChild(imageItem)
     
-    imageItem.addEventListener('error', (event) => {
+    imageItem.addEventListener('error', event => {
 
     //add some way to click/ handle user clicks on the image
 
