@@ -87,8 +87,9 @@ function populateDOM(characters) {
 //function.populateDOM
 
 
-    let anchorWrap = document.createElement("a")
-    anchorWrap.href = "#"
+
+
+
 
     let imageItem = document.createElement("img")
     imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
@@ -111,5 +112,5 @@ function populateDOM(characters) {
 
 })
 }
-maleButton.
+
 greetingDiv.appendChild(castList)
