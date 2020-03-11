@@ -18,7 +18,7 @@ import { starships } from '../Starwars/data/starships.js'
 
 
 const greetingDiv = document.querySelector('.gallery')
-const maleButton = document.querySelector("#Malebutton")
+const maleButton = document.querySelector("#maleButton")
 const femalebutton = document.querySelector("#femaleButton")
 const otherButton = document.querySelector("#otherButton")
 
@@ -85,11 +85,6 @@ function populateDOM(characters) {
  //   castList.appendChild(listItem)
 
 //function.populateDOM
-
-
-
-
-
 
     let imageItem = document.createElement("img")
     imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
