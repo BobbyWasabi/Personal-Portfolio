@@ -18,8 +18,8 @@ import { starships } from '../Starwars/data/starships.js'
 
 
 const greetingDiv = document.querySelector('.gallery')
-const maleButton = document.querySelector("#maleButton")
-const femalebutton = document.querySelector("#femaleButton")
+const maleButton = document.querySelector('#maleButton')
+const femalebutton = document.querySelector('#femaleButton')
 const otherButton = document.querySelector("#otherButton")
 
 const castList = document.createElement("ul")
@@ -88,6 +88,7 @@ function populateDOM(characters) {
 
     let imageItem = document.createElement("img")
     imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
+    //https://swapi.co/api/people/6/
     //greetingDiv.appendChild(imageItem)
     
     imageItem.addEventListener('error', event => {
@@ -102,7 +103,7 @@ function populateDOM(characters) {
         //MouseEvent 
     })
     anchorWrap.appendChild(imageItem)
-    greetingDiv.appendChild(anchorWrap)
+    gallery.appendChild(anchorWrap)
     counter++
 
 })
