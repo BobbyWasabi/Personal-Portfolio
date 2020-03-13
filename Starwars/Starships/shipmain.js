@@ -1,4 +1,6 @@
 import { starships } from '../data/starships.js'
+import {star}
+import { addStarField } from './utils.js'
 
 const nav = document.querySelector('.nav')
 
@@ -22,7 +24,9 @@ function populateNav(starships){
         navList.appendChild(anchorWrap)
         nav.appendChild(navList)
 })
+    shipView.appendChild(shipView)
 }
 
 populateNav(starships)
 
+addStarField(shipView, 100)
