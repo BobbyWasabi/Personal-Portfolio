@@ -31,34 +31,20 @@ function populateNav(starships){
             let shipName = event.target.textContent
             const foundShip = starships.find(ship.name === shipName)
             populateShipView(foundShip)
-        })
+    })
         
-    }
+}
 
-    function populateShipView(shipData) {
-        removeChildren(shipView)
-        let shipNum = getLastNumber(shipData.url)
-        let shipImage = document.createElement('img')
-        shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
-        shipImage.addEventListener('error', event => {
-            shipImage.hidden = truedialog.classList.toggle("is-active")
-        })
-    }
-
-
-
-
-    
-        anchorWrap.textContent = starship.name
-
-        /*let listItem = document.createElement('li')
-        listItem.textContent = starship.name */
-        
-        //anchorWrap.appendChild(listItem)
-        navList.appendChild(anchorWrap)
-        nav.appendChild(navList)
-})
-    shipView.appendChild(shipView)
+function populateShipView(shipData) {
+    removeChildren(shipView)
+    let shipNum = getLastNumber(shipData.url)
+    let shipImage = document.createElement('img')
+    shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
+    shipImage.addEventListener('error', event => {
+        shipImage.hidden = true
+        dialog.classList.toggle("is-active")
+    })
+    shipView.appendChild.toggle("is-active")
 }
 
 populateNav(starships)
