@@ -29,10 +29,17 @@ function populateNav(starships){
         anchorWrap.href = '#'
         anchorWrap.addEventListener('click', event => {
             let shipName = event.target.textContent
-            const foundShip = starships.find(ship.name === shipName)
+            const foundShip = starships.find(ship => ship.name === shipName)
             populateShipView(foundShip)
-    })
-        
+})
+
+let listItem = document.createElement('li')
+listItem.textContent = starship.name
+
+anchorWrap.appendChild(listItem)
+navList.appendChild(anchorWrap)
+nav.appendChild(navList)
+})
 }
 
 function populateShipView(shipData) {
@@ -49,4 +56,4 @@ function populateShipView(shipData) {
 
 populateNav(starships)
 
-addStarField(shipView, 100)
+//addStarField(shipView, 100)

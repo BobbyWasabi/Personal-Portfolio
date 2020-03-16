@@ -1,5 +1,5 @@
-import { people } from '../Starwars/data/people.js'
-import { starships } from '../Starwars/data/starships.js'
+import { people } from './data/people.js'
+import { getLastNumber, removeChildren} from '../scripts/utils.js'
 
 
 const greetingDiv = document.querySelector('.gallery')
@@ -7,7 +7,7 @@ const maleButton = document.querySelector('#maleButton')
 const femalebutton = document.querySelector('#femaleButton')
 const otherButton = document.querySelector("#otherButton")
 
-const castList = document.createElement("ul")
+//const castList = document.createElement("ul")
 
 //const maleCharacters = people.filter(person => person.gender === "male")
 
@@ -18,7 +18,6 @@ const otherCharacters = people.filter(person => {
         person.gender === 'hermaphrodite' ||
         person.gender === 'n/a' ||
         person.gender === 'none'
-    
 ) {
   return person
 }
@@ -26,20 +25,19 @@ const otherCharacters = people.filter(person => {
 
 
 maleButton.addEventListener('click', event => {
-
     populateDOM(people.filter(person => person.gender === 'male'))
 })
 
 femaleButton.addEventListener('click', event => {
-
     populateDOM(people.filter(person => person.gender === 'female'))
 })
+
 otherButton.addEventListener('click', event => {
     populateDOM(otherCharacters)
 })
 
 
-function getCharNumber(url) {
+/*function getCharNumber(url) {
     let end = url.lastIndexOf('/')
     let start = end - 2
     
@@ -48,14 +46,14 @@ function getCharNumber(url) {
     }
     return url.slice(start, end)
 }
-
+*/
 
 
 function populateDOM(characters) {
-    //removeChildren(gallery)
+    removeChildren(gallery)
     characters.forEach(person => {
         //need to extract the number form the person
-        let charNum = getCharNumber(person.url)
+        let charNum = getLastNumber(person.url)
         let anchorWrap = document.createElement('a')
         anchorWrap.href = '#'
 
@@ -71,8 +69,15 @@ function populateDOM(characters) {
 
     let imageItem = document.createElement("img")
     imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
+
+    imageItem.addEventListener('error', (event) => {
+        log.textContent = log.textContent + `${event.type}: Loading image\n`;
+        console.log(event)
+    });
     //https://swapi.co/api/people/6/
     //greetingDiv.appendChild(imageItem)
+
+
     
     imageItem.addEventListener('error', event => {
 
