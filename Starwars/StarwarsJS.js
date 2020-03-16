@@ -1,20 +1,5 @@
-import { films } from '../Starwars/data/films.js'
 import { people } from '../Starwars/data/people.js'
-import { planets } from '../Starwars/data/planets.js'
 import { starships } from '../Starwars/data/starships.js'
-
-// console.log("Starwars page code stuff")
-// console.log(document.title)//root of everything that is in console
-// //console.log(document.children)
-// console.log(document.querySelector(".greeting"))//gives you every item with a class of greeting.
-// const greetingDiv = document.querySelector(".greeting")
-// console.log(greetingDiv.textContent)//allows input not in page
-// greetingDiv.textContent='I just inserted text into a DOM element using my mad programming skills'
-// console.log(films)
-// greetingsDiv.textContent = films[0].opening_crawl
-// console.log(people)
-// greetingDiv.textContent = people[0].name
-
 
 
 const greetingDiv = document.querySelector('.gallery')
@@ -40,8 +25,6 @@ const otherCharacters = people.filter(person => {
 })
 
 
-//console.log(otherCharacters.length)
-
 maleButton.addEventListener('click', event => {
 
     populateDOM(people.filter(person => person.gender === 'male'))
@@ -54,7 +37,7 @@ femaleButton.addEventListener('click', event => {
 otherButton.addEventListener('click', event => {
     populateDOM(otherCharacters)
 })
-//url: "https://swapi.co/api/people/10/"
+
 
 function getCharNumber(url) {
     let end = url.lastIndexOf('/')
@@ -66,7 +49,7 @@ function getCharNumber(url) {
     return url.slice(start, end)
 }
 
-//getCharNumber("https://swapi.co/api/people/1/")
+
 
 function populateDOM(characters) {
     //removeChildren(gallery)
@@ -110,3 +93,5 @@ function populateDOM(characters) {
 }
 
 greetingDiv.appendChild(castList)
+//getCharNumber("https://swapi.co/api/people/1/")
+//url: "https://swapi.co/api/people/10/"

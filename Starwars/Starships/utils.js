@@ -1,6 +1,16 @@
 export function getlastnumber(url){
-    let end = url.lastIndexOf(
+    let end = url.lastIndexOf('/')
+    let start = end - 2
+    if(url.charAt(start) === '/') {
+        start++
+    }
+        return url.slice(start, end)
 }
+ export function removeChildren(element) {
+     while (element.firstChild) {
+         element.removeChild(element.firstChild);
+     }
+ }
 
 
 
@@ -25,7 +35,7 @@ element.appendChild(star)
 }   
 
 }
-funciton getRandomPosition() {
+funciton getRandomPosition(){
     let y = window.outerHeight
     let x = window.innerWidth
     let randomY = Math.floor(Math.random() *y)
