@@ -4,7 +4,7 @@ export function getLastNumber(url){
     if(url.charAt(start) === '/') {
         start++
     }
-        return url.slice(start, end)
+    return url.slice(start, end)
 }
  export function removeChildren(element) {
      while (element.firstChild) {
@@ -18,7 +18,7 @@ export function getLastNumber(url){
 
 
 
-
+/*
 
 export function addStarField(element, numStars){
 element.style.setProperty('background-color', 'black')
@@ -34,7 +34,7 @@ star.style.top = `${xy[1]}px`
 element.appendChild(star)
 }   
 
-}
+}*/
 /*
 funciton getRandomPosition() {
     let y = window.outerHeight

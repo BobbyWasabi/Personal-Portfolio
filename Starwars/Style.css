@@ -1,6 +1,7 @@
-#root{
+:root{
     box-sizing: border-box;
 }
+
 body {
     background-color: #bcbcbc;
 }
@@ -9,7 +10,8 @@ a > img {
     margin: 4px;
 }
 button {
-    font-size: 8rem;
+    font-size: 2rem;
     background-color: orangered;
     border-radius: 7px;
+    padding: 8px;
 }

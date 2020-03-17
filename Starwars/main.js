@@ -70,16 +70,16 @@ function populateDOM(characters) {
     let imageItem = document.createElement("img")
     imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
 
-    imageItem.addEventListener('error', (event) => {
+    /*imageItem.addEventListener('error', (event) => {
         log.textContent = log.textContent + `${event.type}: Loading image\n`;
         console.log(event)
-    });
+    });*/
     //https://swapi.co/api/people/6/
     //greetingDiv.appendChild(imageItem)
 
 
     
-    imageItem.addEventListener('error', event => {
+    imageItem.addEventListener('error', (event) => {
 
     //add some way to click/ handle user clicks on the image
 
@@ -92,7 +92,7 @@ function populateDOM(characters) {
     })
     anchorWrap.appendChild(imageItem)
     gallery.appendChild(anchorWrap)
-    counter++
+    //counter++
 
 })
 }

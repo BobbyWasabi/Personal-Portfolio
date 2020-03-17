@@ -7,7 +7,7 @@ const nav = document.querySelector('.nav')
 
 const navList = document.querySelector('navList')
 
-const shipView = document.querySelector('main')
+const shipView = document.querySelector('.main')
 
 const dialog = document.querySelector('.modal')
 const closeButton = document.querySelector('.modal-close')
