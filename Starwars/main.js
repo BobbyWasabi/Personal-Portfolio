@@ -2,10 +2,10 @@ import { people } from './data/people.js'
 import { getLastNumber, removeChildren} from '../scripts/utils.js'
 
 
-const greetingDiv = document.querySelector('.gallery')
+const gallery = document.querySelector('.gallery')
 const maleButton = document.querySelector('#maleButton')
 const femalebutton = document.querySelector('#femaleButton')
-const otherButton = document.querySelector("#otherButton")
+const otherButton = document.querySelector('#otherButton')
 
 //const castList = document.createElement("ul")
 
