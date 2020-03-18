@@ -4,15 +4,28 @@
 
 body {
     background-color: black;
-    background-image: url(https://orsted.com/-/media/WWW/Images/Corp/Campaign/SpaceSafari/space-safari-background.png);
+    background-image: url(https://images2.minutemediacdn.com/image/upload/c_crop,h_1190,w_2121,x_0,y_134/f_auto,q_auto,w_1100/v1559847832/shape/mentalfloss/24107-istock-1040334020.jpg);
+    background-size: stretch;
 }
 a > img {
     height: 10rem;
     margin: 4px;
+    box-shadow: 3px, black;
+    border-right-color: black;
 }
 button {
     font-size: 2rem;
-    background-color: orangered;
-    border-radius: 7px;
-    padding: 8px;
+    background-color: #757575;
+    border-radius: 6px;
+    padding: 4px;
+    border-left-color: rgb(31, 31, 31);
+    border-left-width: 10px;
+    border-top-color: rgb(200, 200, 200);
+    border-bottom-color: grey;
+    border-right-color: #a1a1a1;
+    border-right-width: 10px;
+}
+h1{
+    color: white;
+    
 }
