@@ -3,7 +3,8 @@
 }
 
 body {
-    background-color: #bcbcbc;
+    background-color: black;
+    background-image: url(https://orsted.com/-/media/WWW/Images/Corp/Campaign/SpaceSafari/space-safari-background.png);
 }
 a > img {
     height: 10rem;
