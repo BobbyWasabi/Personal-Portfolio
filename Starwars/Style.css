@@ -10,12 +10,13 @@ body {
 a > img {
     height: 10rem;
     margin: 4px;
-    box-shadow: 3px, black;
-    border-right-color: black;
+    border: solid;
+    border-image: linear-gradient(to bottom left, #2132f0, #dc0a0a) 30;
+    
 }
 button {
     font-size: 2rem;
-    background-color: #757575;
+    background:  linear-gradient(to top left, #c5c5c5,  rgb(79, 79, 79), rgb(194, 194, 194));
     border-radius: 6px;
     padding: 4px;
     border-left-color: rgb(31, 31, 31);
