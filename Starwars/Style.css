@@ -5,7 +5,7 @@
 body {
     background-color: black;
     background-image: url(https://images2.minutemediacdn.com/image/upload/c_crop,h_1190,w_2121,x_0,y_134/f_auto,q_auto,w_1100/v1559847832/shape/mentalfloss/24107-istock-1040334020.jpg);
-    background-size: stretch;
+    background-size: cover;
 }
 a > img {
     height: 10rem;
@@ -21,7 +21,7 @@ button {
     border-left-color: rgb(31, 31, 31);
     border-left-width: 10px;
     border-top-color: rgb(200, 200, 200);
-    border-bottom-color: grey;
+    border-bottom-color: rgb(66, 66, 66);
     border-right-color: #a1a1a1;
     border-right-width: 10px;
 }
