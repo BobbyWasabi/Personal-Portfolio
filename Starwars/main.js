@@ -27,7 +27,7 @@ const otherCharacters = people.filter(person => {
 maleButton.addEventListener('click', event => {
     populateDOM(people.filter(person => person.gender === 'male'))
 })
-
+maleButton.
 femaleButton.addEventListener('click', event => {
     populateDOM(people.filter(person => person.gender === 'female'))
 })
