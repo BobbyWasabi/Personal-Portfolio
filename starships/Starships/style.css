@@ -3,6 +3,10 @@
     
 }
 
+b:hover{
+    background-color: blue;
+    transition: background-color .2s;
+}
 header,footer {
     display : flex;
     justify-content: center;
@@ -22,6 +26,10 @@ li {
 nav {
     border: solid 2px black;
     padding-right: 1rem;
+}
+element.style {
+--column-gutter: 24px;
+--row-gutter: 40px;
 }
 /* .main{
 

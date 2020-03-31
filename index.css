@@ -145,6 +145,15 @@ footer {
     background-color: darkslategrey;
     color: white;
 }
+a {
+    background-color: none;
+    transition: background-color .5s;
+  }
+  
+  a:hover {
+    background-color: lightgrey;
+  }
+
 /*1200px / 16px = 75em */
 @media (max-width: 75em) {
     html {
