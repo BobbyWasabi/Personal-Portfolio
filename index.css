@@ -88,9 +88,14 @@ h2{
 #projects{
     flex: auto;
     padding: 0px;
+    
 }
 
-
+#project-tile{
+    padding: 0px;
+    margin: 0x;
+    justify-content: flex-end;
+}
 
 #welcome-section{
     display: flex;
@@ -123,7 +128,7 @@ h1{
 h2{
     background-color: orange;
     margin: auto;
-    padding: 30px;
+    padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 #contact {

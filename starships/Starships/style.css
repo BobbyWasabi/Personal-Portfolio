@@ -1,7 +1,13 @@
 :root {
     box-sizing:border-box;
+    
 }
 
+header,footer {
+    display : flex;
+    justify-content: center;
+    font-size: 1.2rem;
+}
 a{
     text-decoration: none;
     font-size: 1.5rem;
