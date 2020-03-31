@@ -12,8 +12,20 @@ a > img {
     margin: 4px;
     border: solid;
     border-image: linear-gradient(to bottom left, #2132f0, #dc0a0a) 30;
+    transition: .10s;
     
-    
+}
+a> img:hover{
+  transform: scale(1.1)
+
+}
+a {
+  background-color: none;
+  transition: .9s;
+}
+
+a:hover {
+  background-color: red;
 }
 button {
     font-size: 2rem;
@@ -42,7 +54,7 @@ h2{
     color: blue;
     margin: center;
 }
-.zoom {
+a.zoom {
     padding: 50px;
     background-color: green;
     transition: transform .2s; /* Animation */
@@ -51,7 +63,7 @@ h2{
     margin: 0 auto;
   }
   
-  .zoom:hover {
+  a.zoom:hover {
     transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
 
@@ -102,3 +114,4 @@ h2{
     color: white;
     transform: rotateY(180deg);
   }
+  
