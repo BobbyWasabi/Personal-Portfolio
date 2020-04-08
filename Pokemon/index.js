@@ -9,3 +9,8 @@ funciton getPokeData(url) {
 }
 
 console.log(getPokeData('https://pokeapi.co/api/v2/pokemon/1/'))
+
+var card = document.querySelector('.card');
+card.addEventListener('click', function() {
+    card.classList.toggle('is-flipped');
+})
