@@ -1,7 +1,18 @@
-body {
+.pokemonGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+    body {
     background-color: aqua;
 }
+.scene{
+    width: 200px;
+    height: 260px;
+    border: 1xp solid #ccc;
+    perspective: 600px;
 
+}
 .card {
     width: 100%;
     height: 100%;
@@ -9,4 +20,24 @@ body {
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+}
+.card.is-flipped {
+    transform: rotateY(180deg)
+}
+.card_face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    backface-visibility: hidden;
+}
+
+.card_face--front {
+    background: orange;
+}
+.card_face--back{
+    background: green;
+    transform: rotateY(180deg);
 }
