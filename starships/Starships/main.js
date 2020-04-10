@@ -1,8 +1,8 @@
-import { starships } from '../data/starships.js'
-import { getLastNumber, removeChildren} from '../scripts/utils.js'
+import { starships } from '/Starwars/data/starships.js'
+import { getLastNumber, removeChildren} from '/scripts/utils.js'
 //import {star}
-import { addStarField } from './utils.js.js.js'
-
+//import { addStarField } from './utils.js.js.js'
+console.log(starships)
 const nav = document.querySelector('.nav')
 
 const navList = document.querySelector('navList')
@@ -56,5 +56,6 @@ shipView.appendChild(shipImage)
 }
 
 populateNav(starships)
+
 
 //addStarField(shipView, 100)
