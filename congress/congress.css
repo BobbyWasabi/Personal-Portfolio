@@ -1,0 +1,7 @@
+body {
+    background-color: aqua;
+}
+.senators {
+    display: flex;
+    flex-wrap: wrap;
+}
