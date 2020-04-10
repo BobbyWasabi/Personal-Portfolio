@@ -2,29 +2,30 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-    body {
-    background-color: aqua;
-}
-.scene{
+  }
+  
+  .scene {
     width: 200px;
     height: 260px;
-    border: 1xp solid #ccc;
+    border: 1px solid #CCC;
+    margin: 10px;
     perspective: 600px;
-
-}
-.card {
+  }
+  
+  .card {
     width: 100%;
     height: 100%;
     transition: transform 1s;
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
-}
-.card.is-flipped {
-    transform: rotateY(180deg)
-}
-.card_face {
+  }
+  
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card__face {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -32,12 +33,13 @@
     text-align: center;
     font-weight: bold;
     backface-visibility: hidden;
-}
-
-.card_face--front {
-    background: orange;
-}
-.card_face--back{
-    background: green;
+  }
+  
+  .card__face--front {
+    background: red;
+  }
+  
+  .card__face--back {
+    background: blue;
     transform: rotateY(180deg);
-}
+  }

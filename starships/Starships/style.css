@@ -1,5 +1,5 @@
 :root {
-    box-sizing:border-box;
+    box-sizing: border-box;
     
 }
 
@@ -31,10 +31,22 @@ element.style {
 --column-gutter: 24px;
 --row-gutter: 40px;
 }
+.twinkling {
+    background: url(http://www.script-tutorials.com/demos/360/images/twinkling.png) top center;
+}
+
+.stars, .tooltip__background, .twinkling {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
 /* .main{
 
  }
 
+ <<<DO AN API CALL TO FIX IMAGE ISSUES?>>>
 .sideborder{
 
  }*/
