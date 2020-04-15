@@ -12,34 +12,67 @@ export function getLastNumber(url){
      }
  }
 
-
-
-
-
-
-
-/*
-
-export function addStarField(element, numStars){
-element.style.setProperty('background-color', 'black')
-for (let i=0; i< numStars; i++) {
-let star = document.createElement('div')
-star.style.setProperty('position', 'absolute')
-star.style.setProperty('width', '2px')
-star.style.setProperty('height', '2px')
-star.style.setProperty('background-color', 'white')
-let xy = getRandomPosition()
-star.style.top = `${xy[0]}px`
-star.style.top = `${xy[1]}px`
-element.appendChild(star)
-}   
-
-}*/
-/*
-funciton getRandomPosition() {
-    let y = window.outerHeight
-    let x = window.innerWidth
-    let randomY = Math.floor(Math.random() *y)
-    let randomX = Math.floor(Math.random()*x)
+ export function addStarField(element, numStars) {
+    element.style.setProperty('background-color', 'black')
+    for (let i = 0; i < numStars; i++) {
+      let star = document.createElement('div')
+      star.style.setProperty('position', 'absolute')
+      star.style.setProperty('width', '10px')
+      star.style.setProperty('height', '10px')
+      star.style.setProperty('background-color', 'white')
+      star.style.setProperty('background-shadow', '1px 1px 3px red, 0 0 1em blue, 0 0 0.7em red')
+      let xy = getRandomPosi()
+      star.style.left = `${xy[0]}px`
+      star.style.top = `${xy[1]}px`
+      element.appendChild(star)
+      console.log(element)
+      
+    }
+    
+  }
+  
+  function getRandomPosi() {
+    let y = document.body.scrollHeight
+    let x = document.body.scrollWidth
+    let randomY = Math.floor(Math.random() * y)
+    let randomX = Math.floor(Math.random() * x)
     return [randomX, randomY]
-}*/
+  } 
+
+
+
+  export function addStarFieldRed(element, numStars) {
+    element.style.setProperty('background-color', 'black')
+    for (let i = 0; i < numStars; i++) {
+      let star = document.createElement('div')
+      star.style.setProperty('position', 'absolute')
+      star.style.setProperty('width', '.5px')
+      star.style.setProperty('height', '.5px')
+      star.style.setProperty('background-color', 'red')
+      star.style.setProperty('background-shadow', '1px 1px 3px red, 0 0 1em blue, 0 0 0.7em red')
+      let xy = getRandomPosi2()
+      star.style.left = `${xy[0]}px`
+      star.style.top = `${xy[1]}px`
+      element.appendChild(star)
+      console.log(element)
+      
+    }
+    
+  }
+  
+  function getRandomPosi2() {
+    let y = document.body.scrollHeight
+    let x = document.body.scrollWidth
+    let randomY = Math.floor(Math.random() * y)
+    let randomX = Math.floor(Math.random() * x)
+    return [randomX, randomY]
+  } 
+
+
+
+
+/*
+To Do:
+
+Need to place the image on the top layer...
+*/

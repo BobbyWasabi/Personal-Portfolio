@@ -1,7 +1,7 @@
 import { starships } from '/Starwars/data/starships.js'
-import { getLastNumber, removeChildren } from '/scripts/utils.js'
+import { getLastNumber, removeChildren, addStarField, addStarFieldRed } from '/scripts/utils.js'
 //import {star}
-//import { addStarField } from './utils.js'
+
 //Error Report: connection is good for starships, it is being console logged
 console.log(starships)
 const nav = document.querySelector('.nav')
@@ -62,6 +62,10 @@ shipView.appendChild(shipImage)
 populateNav(starships)
 
 
-//addStarField(document.querySelector('body'), 1000)
-//addStarField(shipView, 100)
+addStarField(document.querySelector('body'), 1000)
+addStarField(shipView, 100)
+
+addStarFieldRed(document.querySelector('body'), 1000)
+addStarFieldRed(shipView, 100)
+
 //look up checking image errors with Java Script
