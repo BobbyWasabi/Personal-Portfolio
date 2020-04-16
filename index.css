@@ -2,6 +2,7 @@ header{
     background: orange;
     position: fixed;
     width: 100%;
+
 }
 #navbar{
 
@@ -112,10 +113,11 @@ h2{
 }
 #project-list{
     display: flex;
-    justify-content: space-around;
     align-items: center;
     width:100%;
     background-color: greenyellow;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 
