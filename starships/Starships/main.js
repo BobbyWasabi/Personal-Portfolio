@@ -44,13 +44,19 @@ function populateNav(starships) {
     })
     
 }
-
+function imgError(image) {
+    image.onerror = "";
+    image.src = "/PersonalProjects/Yoda.jpeg";
+    //ADD TEXT TO IMAGE IN PHOTOSHOP
+    return true;
+}
 function populateShipView(shipData) {
     removeChildren(shipView)
     let shipNum = getLastNumber(shipData.url)
     console.log(shipNum)
     let shipImage = document.createElement('img')
     shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
+    imgError(shipImage)
     shipImage.addEventListener('error', event => {
         shipImage.hidden = true
         dialog.classList.toggle("visible");
@@ -61,7 +67,7 @@ shipView.appendChild(shipImage)
 
 populateNav(starships)
 
-
+/*
 addStarField(document.querySelector('body'), 1000)
 addStarField(shipView, 100)
 
@@ -69,3 +75,4 @@ addStarFieldRed(document.querySelector('body'), 1000)
 addStarFieldRed(shipView, 100)
 
 //look up checking image errors with Java Script
+*/
