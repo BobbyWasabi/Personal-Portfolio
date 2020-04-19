@@ -41,6 +41,9 @@ figcaption {
 .progressDiv {
     display: flex;
     flex-direction: column;
+    margin-left: 24px;
+    margin-bottom: 9px;
+
 }
 
 label {
