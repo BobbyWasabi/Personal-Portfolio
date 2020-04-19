@@ -1,9 +1,14 @@
+:root{
+  background: linear-gradient( to bottom right, rgb(50, 50, 119), rgb(194, 4, 4),rgb(175, 175, 8),  rgb(50, 50, 119));;
+  background-repeat: no-repeat;
+  height: 100%;
+}
 .pokemonGrid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  
+
   .scene {
     width: 200px;
     height: 260px;
@@ -36,10 +41,10 @@
   }
   
   .card__face--front {
-    background: red;
+    background: orange;
   }
   
   .card__face--back {
-    background: blue;
+    background: green;
     transform: rotateY(180deg);
   }
