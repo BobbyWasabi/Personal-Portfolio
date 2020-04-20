@@ -44,6 +44,7 @@ function populateNav(starships) {
     })
     
 }
+
 function imgError(image) {
     image.onerror = "";
     image.src = "/PersonalProjects/Yoda.jpeg";
@@ -65,9 +66,11 @@ function populateShipView(shipData) {
 shipView.appendChild(shipImage)
 }
 
+
+
 populateNav(starships)
 
-/*
+
 addStarField(document.querySelector('body'), 1000)
 addStarField(shipView, 100)
 
@@ -75,4 +78,3 @@ addStarFieldRed(document.querySelector('body'), 1000)
 addStarFieldRed(shipView, 100)
 
 //look up checking image errors with Java Script
-*/
