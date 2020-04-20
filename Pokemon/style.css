@@ -1,7 +1,7 @@
 :root{
   background: linear-gradient( to bottom right, rgb(50, 50, 119), rgb(194, 4, 4),rgb(175, 175, 8),  rgb(50, 50, 119));;
   background-repeat: no-repeat;
-  height: 100%;
+  height: fill;
 }
 .pokemonGrid {
     display: flex;
@@ -12,18 +12,20 @@
   .scene {
     width: 200px;
     height: 260px;
-    border: 1px solid #CCC;
     margin: 10px;
     perspective: 600px;
+    border: yellow 4px solid;
+    border-radius: .2rem;
   }
   
   .card {
     width: 100%;
     height: 100%;
-    transition: transform 1s;
+    transition: transform .5s;
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+
   }
   
   .card.is-flipped {
@@ -35,16 +37,23 @@
     width: 100%;
     height: 100%;
     color: white;
-    text-align: center;
     font-weight: bold;
     backface-visibility: hidden;
   }
   
   .card__face--front {
-    background: orange;
+    background: linear-gradient(grey, #9198d5);  
+    text-align: center;
   }
   
   .card__face--back {
     background: green;
     transform: rotateY(180deg);
   }
+  h1{
+    color: white;
+    text-align: center;
+  }
+  html{
+    scroll-behavior: smooth;
+}
