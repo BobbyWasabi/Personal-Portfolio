@@ -1,7 +1,7 @@
 :root{
-  background: linear-gradient( to bottom right, rgb(50, 50, 119), rgb(194, 4, 4),rgb(175, 175, 8),  rgb(50, 50, 119));;
+  background-image: url(https://i.imgur.com/TQW5VzG.gif);
   background-repeat: no-repeat;
-  height: fill;
+  background-size: 100%;
 }
 .pokemonGrid {
     display: flex;
@@ -14,8 +14,8 @@
     height: 260px;
     margin: 10px;
     perspective: 600px;
-    border: yellow 4px solid;
-    border-radius: .2rem;
+    border: 2mm ridge rgb(255, 251, 0);
+    border-radius: .9rem;
   }
   
   .card {
@@ -39,6 +39,7 @@
     color: white;
     font-weight: bold;
     backface-visibility: hidden;
+    border-radius: .4rem;
   }
   
   .card__face--front {
