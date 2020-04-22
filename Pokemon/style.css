@@ -2,11 +2,13 @@
   background-image: url(https://i.imgur.com/TQW5VzG.gif);
   background-repeat: no-repeat;
   background-size: 100%;
+  background-blend-mode: soft-light;
 }
 .pokemonGrid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 300px;
   }
 
   .scene {
@@ -27,7 +29,38 @@
     position: relative;
 
   }
+
+#container{
+  height: fit-content;
+  border: .9mm ridge rgb(255, 251, 0);;
+  margin: 12px;
+  padding: 10px;
+}
+
+  h1{
+    color: blue;
+  }
+
+  #newButton{
+    border: .5mm ridge rgb(255, 251, 0);
+    background-color: orange;
+    border-radius: .4rem;
+    z-index: 1;
+    cursor: pointer;
+    ;
   
+    
+  }
+
+  #startButton{
+    border: .5mm ridge rgb(255, 251, 0);
+    background-color: green;
+    border-radius: .4rem;
+    z-index: 1;
+    cursor: pointer;
+
+  }
+
   .card.is-flipped {
     transform: rotateY(180deg);
   }
@@ -51,6 +84,7 @@
     background: green;
     transform: rotateY(180deg);
   }
+
   h1{
     color: white;
     text-align: center;
@@ -58,3 +92,46 @@
   html{
     scroll-behavior: smooth;
 }
+
+
+
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 1;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
