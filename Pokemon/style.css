@@ -47,7 +47,7 @@
     border-radius: .4rem;
     z-index: 1;
     cursor: pointer;
-    ;
+    margin-left: 0%;
   
     
   }
@@ -58,7 +58,8 @@
     border-radius: .4rem;
     z-index: 1;
     cursor: pointer;
-
+    margin-left: 40%;
+    
   }
 
   .card.is-flipped {
