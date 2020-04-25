@@ -1,7 +1,3 @@
-
-
-
-// Reusable async function to fetch data from the provided url
 async function getAPIData(url) {
     try {
       const response = await fetch(url)
@@ -14,10 +10,10 @@ async function getAPIData(url) {
   }
   
 
-  function loadPage() {
-    getAPIData('https://pokeapi.co/api/v2/pokemon/?&limit=90').then((data) => {
+  function loadPage(offset, limit) {
+    getAPIData(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`).then(async (data) => {
       for (const pokemon of data.results) {
-        getAPIData(pokemon.url).then((pokeData) => {
+        await getAPIData(pokemon.url).then((pokeData) => {
           populatePokeCard(pokeData)
         })
       }
@@ -29,11 +25,16 @@ async function getAPIData(url) {
   let newButton = document.querySelector('#newButton')
   
   startButton.addEventListener('click', () => {
-    loadPage()
+    loadPage(690, 50)
   })
   
   newButton.addEventListener('click', () => {
-    addPokemon()
+    let newCardLocation = addPokemon()
+    window.scrollTo({
+      top: newCardLocation.top,
+      left: newCardLocation.left,
+      behavior: 'smooth'
+    })
   })
   
   function populatePokeCard(singlePokemon) {
@@ -50,7 +51,9 @@ async function getAPIData(url) {
       pokeCard.appendChild(pokeBack)
       pokeScene.appendChild(pokeCard)
       pokemonGrid.appendChild(pokeScene)
+      return pokeScene.getBoundingClientRect()
   }
+
   function populateCardFront(pokemon) {
     let cardFront = document.createElement('div')
     cardFront.className = 'card__face card__face--front'
@@ -69,22 +72,35 @@ async function getAPIData(url) {
   function getImageFileName(pokemon) {
     if (pokemon.id < 10) {
       return `00${pokemon.id}`
-    } else if (pokemon.id > 9 && pokemon.id < 100) {
+    } else if (pokemon.id > 9 && pokemon.id < 26) {
       return `0${pokemon.id}`
     } else if (pokemon.id > 722) {
       return `pokeball`
     }
-  }
+    else if (pokemon.id > 699 && pokemon.id < 751) {
+      return `${pokemon.id}`
+    }
+    return `pokeball`
+}
+
   
   function populateCardBack(pokemon) {
     let cardBack = document.createElement('div')
     cardBack.className = 'card__face card__face--back'
     let abilityList = document.createElement('ul')
-    pokemon.abilities.forEach(ability => {
+
+    pokemon.abilities.forEach(ability => { 
       let abilityName = document.createElement('li')
       abilityName.textContent = ability.ability.name
       abilityList.appendChild(abilityName)
+/*
+      pokemon.height.forEach(heightList => {
+      let height = document.createElement('li')
+      height.textContent = height.height.name
+      heightList.appendChild(height)
     })
+    */
+  })
     cardBack.appendChild(abilityList)
     return cardBack
   }
@@ -119,6 +135,7 @@ async function getAPIData(url) {
         }
     ])
     populatePokeCard(Bobbymon)
+    return populatePokeCard(Bobbymon)
   }
   //https://i.imgur.com/VexuoSc.gif
   //https://pa1.narvii.com/6289/202bcd044bbb2bf55a9568433169ad82da37c608_00.gif
