@@ -43,7 +43,7 @@ async function getAPIData(url) {
       let pokeCard = document.createElement('div')
       pokeCard.className = 'card'
       pokeCard.addEventListener('click', () =>
-        pokeCard.classList.toggle('is-flipped'),
+      pokeCard.classList.toggle('is-flipped'),
       )
       let pokeFront = populateCardFront(singlePokemon)
       let pokeBack = populateCardBack(singlePokemon)
@@ -75,12 +75,12 @@ async function getAPIData(url) {
     } else if (pokemon.id > 9 && pokemon.id < 26) {
       return `0${pokemon.id}`
     } else if (pokemon.id > 722) {
-      return `pokeball`
-    }
-    else if (pokemon.id > 699 && pokemon.id < 751) {
       return `${pokemon.id}`
     }
-    return `pokeball`
+    else if (pokemon.id > 699 && pokemon.id < 721) {
+      return `${pokemon.id}`
+    }
+    return `${pokemon.id}`
 }
 
   
@@ -111,7 +111,7 @@ async function getAPIData(url) {
       this.weight = weight
       this.name = name
       this.abilities = abilities
-      this.id = 900
+      this.id = 700
     }
   }
   
@@ -134,7 +134,7 @@ async function getAPIData(url) {
           }
         }
     ])
-    populatePokeCard(Bobbymon)
+    //populatePokeCard(Bobbymon)
     return populatePokeCard(Bobbymon)
   }
   //https://i.imgur.com/VexuoSc.gif
