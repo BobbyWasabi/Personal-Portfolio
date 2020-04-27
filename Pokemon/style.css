@@ -43,6 +43,13 @@
 
   }
 
+
+  .card_description{
+    padding: 20px;
+    margin-bottom: 10px;  
+  }
+
+
 #container{
   height: fit-content;
   border: .9mm ridge rgb(255, 251, 0);;

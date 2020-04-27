@@ -25,7 +25,7 @@ async function getAPIData(url) {
   let newButton = document.querySelector('#newButton')
   
   startButton.addEventListener('click', () => {
-    loadPage(690, 50)
+    loadPage(590, 50)
   })
   
   newButton.addEventListener('click', () => {

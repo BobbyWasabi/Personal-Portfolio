@@ -4,9 +4,10 @@ body {
 .senators {
     display: flex;
     flex-wrap: wrap;
+    border-color: red rgba(170, 50, 220, .6) green;
 }
 
-}
+
 
 header {
     text-align: center;
@@ -19,11 +20,16 @@ header {
 
 figure {
     margin: .5rem;
+    border: 2px;
+    border-color: red rgba(170, 50, 220, .6) green;
+
 }
 
 figcaption {
     display: flex;
     justify-content: space-around;
+    border-color: red rgba(170, 50, 220, .6) green;
+
 }
 
 .fa-democrat {
