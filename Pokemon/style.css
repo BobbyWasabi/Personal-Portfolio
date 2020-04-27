@@ -60,23 +60,34 @@
   h1{
     color: blue;
   }
-
+  h2{
+  color: white;
+  text-align: center;
+  font-size: 19px;
+}
   #newButton{
-    border: .5mm ridge rgb(255, 251, 0);
+    border: .9mm ridge rgb(255, 251, 0);
     background-color: orange;
     border-radius: .4rem;
     cursor: pointer;
     margin-left: 0%;
-  
+    margin-right: 0%;
+    font-size: 19px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: green;
     
   }
 
   #startButton{
-    border: .5mm ridge rgb(255, 251, 0);
+    border: .9mm ridge rgb(255, 251, 0);
     background-color: green;
     border-radius: .4rem;
     cursor: pointer;
-    margin-left: 43%;
+    margin-left: 16%;
+    margin-right: 34%;
+    font-size: 19px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: orange;
     
   }
 
@@ -115,6 +126,7 @@
   h1{
     color: white;
     text-align: center;
+    margin-bottom: -10px;
   }
   html{
     scroll-behavior: smooth;
