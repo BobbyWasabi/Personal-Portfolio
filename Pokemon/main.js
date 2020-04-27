@@ -8,7 +8,7 @@ async function getAPIData(url) {
       
     }
   }
-  
+  //https://pokeapi.co/api/v2/evolution-chain/?limit=20&offset=20
 
   function loadPage(offset, limit) {
     getAPIData(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`).then(async (data) => {
@@ -25,7 +25,7 @@ async function getAPIData(url) {
   let newButton = document.querySelector('#newButton')
   
   startButton.addEventListener('click', () => {
-    loadPage(590, 50)
+    loadPage(588, 51)
   })
   
   newButton.addEventListener('click', () => {
