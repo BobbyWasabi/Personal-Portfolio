@@ -9,7 +9,7 @@
 
 
 :root{
-  background-image: url(https://i.imgur.com/TQW5VzG.gif);
+  background-image: linear-gradient(rgb(255, 255, 255, .05), rgba(9, 119, 253, 0.5), rgba(79, 224, 7, 0.3)), url(https://i.imgur.com/TQW5VzG.gif);
   background-repeat: no-repeat;
   background-size: 100%;
   background-blend-mode: soft-light;
@@ -45,7 +45,7 @@
 
 
   .card_description{
-    padding: 20px;
+    padding: 80px;
     margin-bottom: 10px;  
   }
 
@@ -54,7 +54,8 @@
   height: fit-content;
   border: .9mm ridge rgb(255, 251, 0);;
   margin: 12px;
-  padding: 10px;
+  padding: 18px;
+  text-align: center;
 }
 
   h1{
@@ -70,9 +71,8 @@
     background-color: orange;
     border-radius: .4rem;
     opacity: 90%;
-    cursor: pointer;
-    margin-left: auto, 100%;
-    margin-right: 0%;
+    margin-top: 120px;
+    cursor: pointer;    
     font-size: 19px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: green;
@@ -83,9 +83,7 @@
     border: .9mm ridge rgb(255, 251, 0);
     background-color: green;
     border-radius: .4rem;
-    margin-left: 36%;
     opacity: 90%;
-    margin-right: auto;
     cursor: pointer;
     font-size: 19px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -117,9 +115,10 @@
   
   .card__face--front {
     background: linear-gradient(rgb(115, 160, 243), #9198d5);  
+    margin-top: 10px;
     text-align: center;
     color:whitesmoke;
-    im
+
     margin: -1px;
   }
   
@@ -137,7 +136,9 @@
   html{
     scroll-behavior: smooth;
 }
-
+.height{
+  color: white;
+}
 
 
 
@@ -180,3 +181,6 @@
   background: #f1f1f1;
 }
 
+.imgClass{
+  padding-top: 10px;
+}
