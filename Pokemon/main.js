@@ -59,6 +59,7 @@ async function getAPIData(url) {
     cardFront.className = 'card__face card__face--front'
 
     let frontImage = document.createElement('img')
+    frontImage.className = "imgClass"
 
     frontImage.src = `./Pokepics/${getImageFileName(pokemon)}${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}.png`
   
@@ -88,10 +89,16 @@ async function getAPIData(url) {
     let cardBack = document.createElement('div')
     cardBack.className = 'card__face card__face--back'
     let abilityList = document.createElement('ul')
-
+    console.log(pokemon)
+    console.log(pokemon.height)
+    let height = document.createElement("p")
+    height.textContent = "Height " + pokemon.height
+    height.className = "height"
+    let abilit = document.createElement("p")
+    abilit.textContent = "Abilities: "
     pokemon.abilities.forEach(ability => { 
       let abilityName = document.createElement('li')
-      abilityName.textContent = ability.ability.name
+      abilityName.textContent =  ability.ability.name
       abilityList.appendChild(abilityName)
 /*
       pokemon.height.forEach(heightList => {
@@ -101,7 +108,10 @@ async function getAPIData(url) {
     })
     */
   })
+  //pokemon.height.forEach
+    cardBack.appendChild(abilit)
     cardBack.appendChild(abilityList)
+    cardBack.appendChild(height)
     return cardBack
   }
   
@@ -118,6 +128,11 @@ async function getAPIData(url) {
   function addPokemon() {
     let Bobbymon = new Pokemon(190, 290, 'Bobbymon',
       [
+        {
+          ability: {
+          name: 'Ability:'
+          }
+        },
         {
           ability: {
           name: 'Nerd-out'
