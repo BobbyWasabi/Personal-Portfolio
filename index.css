@@ -1,3 +1,6 @@
+:root{
+    background-color: #A1F5C2;
+}
 header{
     background: orange;
     position: fixed;
@@ -25,7 +28,7 @@ body{
 .welcome-section{
     height: auto;
     flex: auto;
-    color: orange;
+    color: rgb(136, 89, 2);
     width: 100%;
     
 }
@@ -42,7 +45,6 @@ h1
 }
 h2{
     height: auto;
-    text-underline-position: below;
 }
 .fas{
     color: blue;
@@ -102,17 +104,21 @@ h2{
 
 #welcome-section{
     display: flex;
+    
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
+
     background-image: url(https://media2.giphy.com/media/R9z50rPINd5ew/giphy.gif?cid=790b76116efd6cc12e24188d8f8cf975736e29c4a38c6388&rid=giphy.gif);
+    margin-top: 50px;
     background-size: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-color: yellowgreen;
     min-height: 500px;
+    
     z-index: inherit;
 
 }
@@ -134,8 +140,9 @@ h1{
 }
 h2{
     background-color: orange;
-    margin-right: auto;
+    margin: auto;
     padding: 20px;
+    margin-top: 8px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }

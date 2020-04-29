@@ -53,7 +53,11 @@ async function getAPIData(url) {
       pokemonGrid.appendChild(pokeScene)
       return pokeScene.getBoundingClientRect()
   }
-
+  function imgError(image) {
+    image.onerror = "";
+    image.src = "/Pokemon/Pokepics/pokeball.gif";
+    return true;
+}
   function populateCardFront(pokemon) {
     let cardFront = document.createElement('div')
     cardFront.className = 'card__face card__face--front'
@@ -62,11 +66,12 @@ async function getAPIData(url) {
     frontImage.className = "imgClass"
 
     frontImage.src = `./Pokepics/${getImageFileName(pokemon)}${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}.png`
-  
+
     let frontLabel = document.createElement('p')
     frontLabel.textContent = `${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}`
     cardFront.appendChild(frontImage)
     cardFront.appendChild(frontLabel)
+    imgError(frontImage)
     return cardFront
   }
   
@@ -94,6 +99,12 @@ async function getAPIData(url) {
     let height = document.createElement("p")
     height.textContent = "Height " + pokemon.height
     height.className = "height"
+   
+    let weight = document.createElement("p")
+    weight.textContent = "Weight " + pokemon.weight
+    weight.className = "weight"
+    console.log(pokemon.weight)
+
     let abilit = document.createElement("p")
     abilit.textContent = "Abilities: "
     pokemon.abilities.forEach(ability => { 
@@ -112,6 +123,7 @@ async function getAPIData(url) {
     cardBack.appendChild(abilit)
     cardBack.appendChild(abilityList)
     cardBack.appendChild(height)
+    cardBack.appendChild(weight)
     return cardBack
   }
   
