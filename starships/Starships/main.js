@@ -58,10 +58,10 @@ function populateShipView(shipData) {
     console.log(shipNum)
     let shipImage = document.createElement('img')
     shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
-    imgError(shipImage)
+    //
     shipImage.addEventListener('error', event => {
 
-        shipImage.hidden = true
+        imgError(shipImage)
         dialog.classList.toggle("visible");
     })
 
