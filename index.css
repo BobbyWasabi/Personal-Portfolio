@@ -28,7 +28,7 @@ body{
 .welcome-section{
     height: auto;
     flex: auto;
-    color: rgb(136, 89, 2);
+    color: rgb(255, 166, 0);
     width: 100%;
     
 }
@@ -69,7 +69,6 @@ h2{
     display: block;
     padding-top: 1rem;
     padding-right: 10rem;
-    padding-bottom: 2rem;
     padding-left: 4rem;
     text-decoration: initial;
     color: blue;
@@ -149,8 +148,9 @@ h2{
 #contact {
     display: flex;
     justify-content: space-evenly;
-    margin: 4rem;
-    flex-wrap: wrap;
+    margin: -4px;
+    flex-wrap: 100%;
+    padding: 10px;
 }
 footer {
     display: flex;
@@ -161,8 +161,11 @@ footer {
     color: white;
 }
 a {
+
     background-color: none;
     transition: background-color .5s;
+    text-decoration: initial;
+
   }
   
   a:hover {
