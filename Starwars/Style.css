@@ -1,5 +1,6 @@
 :root{
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -26,6 +27,7 @@ a {
 
 a:hover {
   background-color: red;
+  
 }
 button {
     font-size: 2rem;
