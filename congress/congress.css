@@ -1,5 +1,14 @@
+:root{
+    z-index: -1;
+    background-image: linear-gradient(rgba(255, 0, 0, 0.387), rgba(96, 91, 253, 0.387));
+    background: opacity(10%);
+    background-size: 100%;
+
+
+
+}
 body {
-    background-color: aqua;
+    
 }
 .senators {
     display: flex;
