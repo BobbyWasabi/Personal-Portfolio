@@ -118,8 +118,7 @@
     margin-top: 10px;
     text-align: center;
     color:whitesmoke;
-
-    margin: -1px;
+    margin: -.5px
   }
   
   .card__face--back {
@@ -132,12 +131,13 @@
     color: white;
     text-align: center;
     margin-bottom: -10px;
+
   }
   html{
     scroll-behavior: smooth;
 }
 .height{
-  color: white;
+  color: rgb(13, 97, 13);
 }
 
 
@@ -183,7 +183,7 @@
 
 .imgClass{
   padding-top: 10px;
-  width: 90%;
-  height: 100%;
+  width: 83%;
+  height: 83%;
   padding-bottom: 10px;
 }
