@@ -9,7 +9,7 @@ async function getAPIData(url) {
     }
   }
   //https://pokeapi.co/api/v2/evolution-chain/?limit=20&offset=20
-
+/*
   function loadPage(offset, limit) {
     getAPIData(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`).then(async (data) => {
       for (const pokemon of data.results) {
@@ -19,15 +19,37 @@ async function getAPIData(url) {
       }
     })
   }
-  
+  */
   let pokemonGrid = document.querySelector('.pokemonGrid')
   let startButton = document.querySelector('#startButton')
   let newButton = document.querySelector('#newButton')
   
-  startButton.addEventListener('click', () => {
-    loadPage(588, 51)
-  })
   
+  startButton.addEventListener('click', () => {
+    //loadPage(588, 51)
+    randCards(588, 51)
+  })
+ 
+  let cardArr = []
+  let randObj = {}
+  
+  function randCards(offset, limit) {
+      getAPIData(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`).then(async(data) => {
+          for (const pokemon of data.results) {
+              await getAPIData(pokemon.url).then((pokeData) => {
+                  cardArr = [] //clean array
+                  let randObj = {}
+                  cardArr.push(pokeData)
+                  Object.assign(randObj, cardArr)
+                  console.log(randObj)
+                  let randCard = randObj[Math.floor(Math.random() * cardArr.length)]
+                  populatePokeCard(randCard)
+  
+              })
+          }
+      })
+  } 
+
   newButton.addEventListener('click', () => {
     let newCardLocation = addPokemon()
     window.scrollTo({
@@ -66,12 +88,15 @@ async function getAPIData(url) {
     frontImage.className = "imgClass"
 
     frontImage.src = `./Pokepics/${getImageFileName(pokemon)}${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}.png`
-
+    frontImage.onerror = function() {
+      imgError(frontImage)
+  }
     let frontLabel = document.createElement('p')
     frontLabel.textContent = `${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}`
-    cardFront.appendChild(frontImage)
     cardFront.appendChild(frontLabel)
-    imgError(frontImage)
+    cardFront.appendChild(frontImage)
+
+    
     return cardFront
   }
   
@@ -81,7 +106,7 @@ async function getAPIData(url) {
     } else if (pokemon.id > 9 && pokemon.id < 26) {
       return `0${pokemon.id}`
     } else if (pokemon.id > 722) {
-      return `${pokemon.id}`
+      return `${pokeball}`
     }
     else if (pokemon.id > 699 && pokemon.id < 721) {
       return `${pokemon.id}`
@@ -89,7 +114,7 @@ async function getAPIData(url) {
     return `${pokemon.id}`
 }
 
-  
+
   function populateCardBack(pokemon) {
     let cardBack = document.createElement('div')
     cardBack.className = 'card__face card__face--back'
@@ -97,13 +122,18 @@ async function getAPIData(url) {
     console.log(pokemon)
     console.log(pokemon.height)
     let height = document.createElement("p")
-    height.textContent = "Height " + pokemon.height
+    height.textContent = "Height: " + pokemon.height
     height.className = "height"
    
     let weight = document.createElement("p")
-    weight.textContent = "Weight " + pokemon.weight
+    weight.textContent = "Weight: " + pokemon.weight
     weight.className = "weight"
     console.log(pokemon.weight)
+
+    let type = document.createElement("p")
+    type.textContent = "Type: " + pokemon.type
+    type.className = "type"
+    console.log(pokemon.type)
 
     let abilit = document.createElement("p")
     abilit.textContent = "Abilities: "
@@ -120,10 +150,12 @@ async function getAPIData(url) {
     */
   })
   //pokemon.height.forEach
+    //cardBack.appendChild(name)
     cardBack.appendChild(abilit)
     cardBack.appendChild(abilityList)
     cardBack.appendChild(height)
     cardBack.appendChild(weight)
+    //cardBack.appendChild(type)
     return cardBack
   }
   
@@ -133,12 +165,13 @@ async function getAPIData(url) {
       this.weight = weight
       this.name = name
       this.abilities = abilities
+      //this.type = type
       this.id = 700
     }
   }
   
   function addPokemon() {
-    let Bobbymon = new Pokemon(190, 290, 'Bobbymon',
+    let Bobbymon = new Pokemon(66, 150, 'Bobbymon',
       [
         {
           ability: {
@@ -157,7 +190,7 @@ async function getAPIData(url) {
         },
         {
           ability: {
-          name: 'Code Stomp'
+          name: 'Code Storm'
           }
         }
     ])
